@@ -1,0 +1,75 @@
+/* 全站主题：与首页「神经星河」配色一致 */
+:root {
+  --mx-bg: #070312;
+  --mx-purple: #8b5cf6;
+  --mx-cyan: #22d3ee;
+  --mx-pink: #f472b6;
+  --mx-green: #34f5c5;
+  --mx-muted: #a59cc4;
+  --mx-line: #ffffff14;
+  --mx-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.dark {
+  --vp-c-bg: #0a0618;
+  --vp-c-bg-alt: #080414;
+  --vp-c-bg-elv: #120c26;
+  --vp-c-bg-soft: #151030;
+  --vp-c-divider: #ffffff14;
+  --vp-c-gutter: #ffffff0d;
+  --vp-c-text-1: #eee9ff;
+  --vp-c-text-2: #b8b0d6;
+  --vp-c-brand-1: #a78bfa;
+  --vp-c-brand-2: #8b5cf6;
+  --vp-c-brand-3: #7c3aed;
+  --vp-c-brand-soft: #8b5cf629;
+  --vp-code-block-bg: #0d0820;
+  --vp-code-tab-bg: #0d0820;
+  --vp-home-hero-name-color: transparent;
+  --vp-button-brand-bg: #7c3aed;
+}
+
+.VPNav .VPNavBar:not(.home.top) .content-body,
+.VPNavBar.has-sidebar .content-body {
+  backdrop-filter: blur(14px);
+}
+
+/* 正文阅读体验 */
+.vp-doc h1 {
+  background: linear-gradient(90deg, var(--mx-cyan), var(--mx-purple), var(--mx-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.vp-doc h2 {
+  border-top-color: var(--mx-line);
+}
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+.vp-doc .custom-block.tip {
+  border-color: #8b5cf655;
+}
+
+/* 文章顶部的「学习目标」卡片：::: info 学习目标 */
+.vp-doc .custom-block.info {
+  background: linear-gradient(135deg, #8b5cf614, #22d3ee0d);
+  border: 1px solid #8b5cf633;
+}
+
+/* 代码组标签：当前语言高亮 */
+.vp-code-group .tabs label {
+  font-family: var(--mx-mono);
+}
+
+/* 首页隐藏默认内容区的上下边距，交给 HomePage 自己排版 */
+.mx-home .VPContent {
+  padding-top: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
